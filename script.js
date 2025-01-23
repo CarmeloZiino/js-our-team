@@ -60,3 +60,30 @@ function cicloAddMembers(){
 
 cicloAddMembers();
 
+
+//////////Bonus =>
+  const form = document.getElementById('add-member-form');
+
+
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+  const name = document.getElementById('nome-cognome').value;
+  const email = document.getElementById('exampleInputEmail1').value;
+  const role = document.getElementById('ruolo-azienda').value;
+  const img = document.getElementById('img-profilo').value;
+
+  const newMember = {
+      name: name,
+      email: email,
+      role: role,
+      img: img,
+  };
+
+  teamMembers.push(newMember);
+
+  cicloAddMembers(newMember);
+  
+
+});
