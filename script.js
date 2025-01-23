@@ -83,7 +83,17 @@ cicloAddMembers();
 
   teamMembers.push(newMember);
 
-  cicloAddMembers(newMember);
-  
+  teamContainer.innerHTML += `
+    <div class="d-flex bg-dark col-12 col-md-6 col-lg-3">
+      <figure class="m-0 flex-shrink-0">
+        <img height="100px" src="./${newMember.img}" alt="${newMember.name}">
+      </figure>
+      <div class="ms-3 flex-grow-1 p-2">
+        <h5 class="text-light mb-1 fs-5 fs-md-4 fs-lg-3">${newMember.name}</h5>
+        <span class="text-light mb-1 d-block fs-6 fs-md-5">${newMember.role}</span>
+        <span class="text-info fs-6">${newMember.email}</span>
+      </div>
+    </div>
+  `;
 
 });
